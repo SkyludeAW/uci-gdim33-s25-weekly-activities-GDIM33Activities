@@ -32,6 +32,4 @@ After they finish the action, their turn will end and the next character in sequ
 The aesthetic of the game would probably be something lovecraftian.
 
 ## W2
-Write your W2 Devlog here.
-
-Continue adding additional headers below this one for future weeks and future activities.
+N/A (there is no devlog for week 2)
