@@ -33,3 +33,22 @@ The aesthetic of the game would probably be something lovecraftian.
 
 ## W2
 N/A (there is no devlog for week 2)
+
+## W3
+### Activity 1
+#### New Pitch Breakdown Link:
+https://drive.google.com/file/d/11DBX-YsytkqCEoSsYu8VwVuhDdAKxQEf/view?usp=sharing
+
+### Activity 2
+#### 1.
+This allows other objects in the scene to access the click npc event when adding new logic that requires interaction with this event.
+
+#### 2.
+The Debug.Log() node allows immediate notification when an event is triggerered or a certain node on the logic chain is reached in the console.
+
+#### 3.
+For my vertical slice in particular, the set cursor lock state is not relevant. My game is a top-down 2D game that requires the player to click on the GUI to input commands, in which I do not want the cursor to be locked.
+
+#### 4.
+My vertical slice would use the concept of game states. My game is a turn-based SRPG, where in each turn, there would be a preparation state for the player to input their commands, and an action state to execute and display the results of the commands.
+
