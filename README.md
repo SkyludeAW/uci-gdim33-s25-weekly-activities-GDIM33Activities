@@ -52,3 +52,19 @@ For my vertical slice in particular, the set cursor lock state is not relevant. 
 #### 4.
 My vertical slice would use the concept of game states. My game is a turn-based SRPG, where in each turn, there would be a preparation state for the player to input their commands, and an action state to execute and display the results of the commands.
 
+## W4
+### Activity 1
+My current dev has the basic turn based movement system and includes the attack action of two dummy characters. One dummy enemy exists, and does not have any AI right now, so the playtesting goal is mostly about identifying any potential bugs or suggestions on contents.
+
+#### Playtesting Team:
+Gong Chen, Ruichen Ma, Ziyue Yang
+
+#### Playtest Notes
+Right now, the camera teleports when moving from character to character between turns, and the playtesting team suggested it could be smoothened up a little. The character also teleports from tile to tiles, and also stutter during what is supposed to be a continuous movement, which should also be fixed. There are not enough content right now to provide exact feedbacks, but some idea about potential contents include a spreading, festering terrain tile. 
+
+### Activity 2
+1. Yes, as the logic structure of creating and activating the chain of dialogues is already established through C# code and visual scripting. The only things a writer would need to add are new ScriptableObject DialogueNodeW4s that contains the displayed text and possible player replies, which themselves links to their own subsequent DialogueNodeW4 and so on. Only data, not logic is modified here, so no code or graph need to change.
+
+2. To create a large amount of dialogue options, especially when there are reused dialogue nodes with different options, such recursive-like method of extending the dialogue chain would be considerably inefficient. Creating a procedural, code-based list of nodes and possible replies allow the addition of custom dialogue chain logic and also eases/cleanly organize the existing dialogue lines and replies. 
+
+3. The "Regenerate Nodes" button scans and updates if any new or custom classes are added, and creates their associated nodes, such as getters and setters of member variables, respectively. Unity's default visual scripting graph could possibly exclude any nodes associate to non-Unity-native classes or packages.
