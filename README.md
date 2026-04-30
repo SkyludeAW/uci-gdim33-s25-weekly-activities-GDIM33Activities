@@ -68,3 +68,19 @@ Right now, the camera teleports when moving from character to character between 
 2. To create a large amount of dialogue options, especially when there are reused dialogue nodes with different options, such recursive-like method of extending the dialogue chain would be considerably inefficient. Creating a procedural, code-based list of nodes and possible replies allow the addition of custom dialogue chain logic and also eases/cleanly organize the existing dialogue lines and replies. 
 
 3. The "Regenerate Nodes" button scans and updates if any new or custom classes are added, and creates their associated nodes, such as getters and setters of member variables, respectively. Unity's default visual scripting graph could possibly exclude any nodes associate to non-Unity-native classes or packages.
+
+## W5
+### Activity 1
+1. Basic animation controllers and animation states for each character.
+- Create the animation from the sprite sheets of each character
+- Create animation states idle, movement, attack, etc. for each character
+- Create triggers or variables in the animator and apply them to transitions in different animation states
+- Create code-based triggers to alter the animation variables in the state machine system
+
+2. Animation events incorporated into the animation that links up with other events such as initialization of projectiles or visual effects.
+- Create animation events in attack trigger keyframes and start/end of animations for each character
+- Create a custom animation listener class that acts according to the animation events
+- Create a vfx/sfx system that uses the animation listener class to sync with the animation of characters
+
+### Activity 2
+I have not finished making the art assets for my game yet, so I used empty aniamtions as placeholders and created the animation states and the trigger variables first. I created the AnimatinListener class that contains multiple C# events such as AnimationBeggin, AttackTrigger, AnimationEnd, etc. I used a switch statement to take in an enum argument in the parameter of the method triggered when the animation event is reached to determine which specific event to trigger. This setup allows the game objects that has the AnimationListener class to react accordingly in their own unique ways when a specific keyframe is reached, such as spawning the bullet for a ranged attack. I could also make the C# events a mutable list that allows more flexibility in the amount of reactions to the keyframe of animations. However, I am still finishing up on my code-based state machine for my characters, and will add in my transition triggers for animations after I have completed the state machine.
