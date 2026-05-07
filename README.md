@@ -84,3 +84,17 @@ Right now, the camera teleports when moving from character to character between 
 
 ### Activity 2
 I have not finished making the art assets for my game yet, so I used empty aniamtions as placeholders and created the animation states and the trigger variables first. I created the AnimatinListener class that contains multiple C# events such as AnimationBeggin, AttackTrigger, AnimationEnd, etc. I used a switch statement to take in an enum argument in the parameter of the method triggered when the animation event is reached to determine which specific event to trigger. This setup allows the game objects that has the AnimationListener class to react accordingly in their own unique ways when a specific keyframe is reached, such as spawning the bullet for a ranged attack. I could also make the C# events a mutable list that allows more flexibility in the amount of reactions to the keyframe of animations. However, I am still finishing up on my code-based state machine for my characters, and will add in my transition triggers for animations after I have completed the state machine.
+
+## W6
+### Activity 1
+Link to Milestone: https://skyludeaw.itch.io/unbecoming
+I slacked off this week and did not add new stuff to my game other than fixing a few minor bugs...
+
+### Activity 2
+1. Since color here is represented by a float, multiplying the RGB values results in a smaller value, which makes the overall color darker in the RGB color system. 
+
+2. Multiplying two alpha value that are less than 1.0 results in a more translucent value, as opaqueness scales with the alpha value, with 1.0 as completely opaque and 0 as completely transparent.
+
+3. The UV0 came from the first, default UV that is attached with the shiba model.
+
+4. This is exciting as I had often seen those filters or layer modes in Photoshop without knowing how they exactly work. I can now create unique filters or visual effects.
