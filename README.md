@@ -98,3 +98,19 @@ I slacked off this week and did not add new stuff to my game other than fixing a
 3. The UV0 came from the first, default UV that is attached with the shiba model.
 
 4. This is exciting as I had often seen those filters or layer modes in Photoshop without knowing how they exactly work. I can now create unique filters or visual effects.
+
+## W7
+### Devlog Questions
+1. They came from the vertex's color in the mesh data of the applied objects.
+
+2. The color on the edges came from an interpolation between the color of the vertices that composes the edge.
+
+3. Without specific mapping via the 2d texture and UV, the color of each pixel may only be approxiamated with the vertex color on the mesh data. Though being less detailed, this may act as a fallback for when the texture goes missing, or a solution for machines with less powerful GPUs.
+
+4. There is a small spot on the butt of the shiba that has a conspicuously different color when applying shaders that utilizes the vertex normals, which meant that specific vertex's normal might be wrong.
+
+5. There can be some sort of debug shader that reacts extremely to things in the surrounding environment, such as light or some sort of hitbox. This allows quick visualization and validation of if any mechanism is being placed out of place and affecting this object with unintended effects. For example, there might be a field of vision collider from some enemy that somehow pierces through a wall that it is not supposed to, and debug shaders like this may alarm us developers immediately.
+
+6. That specific vertex's normal data might be off, which affects the lighting calculation in the shader graph.
+
+7. The additive blending mode adds the RGB values of the shader color to its background, which makes light areas of the shader appear lighter when rendered, while keeping black areas that have a RGB value of (0,0,0) transparent, unlike the multiply blending mode which makes the RGB value smaller and creates a darkening effect. This makes additive good for glowing, translucent VFXs like fire.
